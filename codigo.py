@@ -1,8 +1,8 @@
 import pyautogui
 import time
-import pandas
+import pandas as pd
 
-# pyautogui.write -> escreve um texto
+# pyautogui.write -> escreve um texto em string
 # pyautogui.press -> aperta uma tecla
 # pyautogui.click -> clica em algum lugar da tela
 # pyautogui.hotkey -> combinação de teclas
@@ -18,12 +18,18 @@ pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 time.sleep(3)
 
-pyautogui.click(x=2358, y=365)
+# pyautogui.click(x=2358, y=365)
+pyautogui.press("tab")
 pyautogui.write("teste@teste.com")
 
 pyautogui.press("tab")
-pyautogui.write("teste")
+pyautogui.write("aloalo")
 
-pyautogui.click(x=2588, y=522 )
+# pyautogui.click(x=2588, y=522 )
+pyautogui.press("tab")
+pyautogui.press("enter")
 
-tabela = pandas.read_csv("produtos.csv")
+tabela = pd.read_csv("produtos.csv")
+
+# for linha in tabela.index: # tabela.index é referente as linhas da taela
+#     pyautogui.press("tab")
